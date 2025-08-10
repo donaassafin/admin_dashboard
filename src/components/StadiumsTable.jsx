@@ -17,7 +17,7 @@ const StadiumsTable = () => {
       });
       setStadiums(res.data.data.Stadiums || []);
     } catch (err) {
-      console.error("❌ Error fetching stadiums", err);
+      console.error(" Error fetching stadiums", err);
     }
   };
 

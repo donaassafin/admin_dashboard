@@ -1,4 +1,3 @@
-// src/components/ResetPassword.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
@@ -16,7 +15,6 @@ function ResetPassword() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  // ✅ التقاط التوكن والإيميل من الرابط
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const tokenFromURL = params.get("token");
@@ -41,7 +39,6 @@ function ResetPassword() {
 
       setMessage("✔ تمت إعادة تعيين كلمة المرور بنجاح.");
 
-      // ✅ انتقال تلقائي للداشبورد
       setTimeout(() => {
        navigate("/", { replace: true });
 
@@ -49,7 +46,7 @@ function ResetPassword() {
 
     } catch (err) {
       console.error(err);
-      setError("❌ فشل إعادة التعيين. تحقق من الرمز أو البيانات.");
+      setError(" فشل إعادة التعيين. تحقق من الرمز أو البيانات.");
     }
   };
 

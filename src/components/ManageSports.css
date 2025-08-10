@@ -11,7 +11,7 @@
   text-align: center;
   margin-bottom: 40px;
   font-weight: bold;
-  color: #4caf50; /* اللون الأخضر */
+  color: #4caf50; 
   user-select: none;
 }
 
@@ -125,7 +125,6 @@ button.delete:hover {
   background-color: #d32f2f;
 }
 
-/* رسالة */
 .message {
   text-align: center;
   margin-bottom: 25px;

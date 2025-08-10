@@ -41,7 +41,7 @@
 .stadium-details-card strong {
   color: #4caf50;
   display: inline-block;
-  width: 110px; /* ثبات العرض للعناوين */
+  width: 110px;
   font-weight: 600;
 }
 

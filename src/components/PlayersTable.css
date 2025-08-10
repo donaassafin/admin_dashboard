@@ -42,11 +42,11 @@
 .players-page {
   padding: 30px;
   background-color: #f9f9f9;
-  min-height: 100vh; /* يغطي طول الشاشة */
+  min-height: 100vh; 
 }
 
 .styled-table {
-  margin: 20px auto; /* مسافة خارجية حول الجدول + توسيطه */
+  margin: 20px auto;
   border-collapse: collapse;
-  width: 95%; /* بحيث ما يلتصق بالأطراف */
+  width: 95%; 
 }

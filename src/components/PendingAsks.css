@@ -1,4 +1,3 @@
-/* PendingAsks.css */
 
 .clickable-row {
   cursor: pointer;
@@ -6,8 +5,8 @@
 }
 
 .clickable-row:hover {
-  background-color: #f5faff; /* لون أزرق فاتح عند المرور */
-  transform: scale(1.01); /* تكبير بسيط لإبراز التفاعل */
+  background-color: #f5faff; 
+  transform: scale(1.01); 
 }
 
 .styled-table {
@@ -97,16 +96,15 @@
   opacity: 0.85;
 }
 .pending-asks-page {
-  padding: 20px; /* مسافة داخلية من جميع الجهات */
-  background-color: #f9f9f9; /* لون خلفية ناعم */
-  min-height: 100vh; /* يغطي كامل ارتفاع الشاشة */
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  min-height: 100vh; 
 }
 
 .table-container {
-  margin: 20px auto; /* مسافة خارجية وتوسيط الجدول */
-  max-width: 95%; /* حتى ما يلتصق بالأطراف */
+  margin: 20px auto; 
+  max-width: 95%; 
 }
-
 .styled-table {
   width: 100%;
   border-collapse: collapse;

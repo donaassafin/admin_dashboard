@@ -18,7 +18,7 @@ const StadiumDetails = () => {
       });
       setStadium(res.data.data.Stadium);
     } catch (err) {
-      console.error("❌ Failed to fetch stadium details", err);
+      console.error("Failed to fetch stadium details", err);
       alert(t("fetchFailed") || "فشل في جلب بيانات الملعب");
       navigate("/stadiums");
     }
@@ -28,7 +28,6 @@ const StadiumDetails = () => {
     fetchStadium();
   }, [id]);
 
-  // لو حابب تضيف حذف في المستقبل
   const handleDelete = async () => {
     const confirmed = window.confirm(t("confirmDeleteStadium") || "هل أنت متأكد من حذف الملعب؟");
     if (!confirmed) return;
@@ -44,7 +43,7 @@ const StadiumDetails = () => {
       }
     } catch (err) {
       console.error("Error deleting stadium", err);
-      alert("❌ " + (err.response?.data?.message || "فشل في حذف الملعب"));
+      alert( (err.response?.data?.message || "فشل في حذف الملعب"));
     }
   };
 
@@ -74,7 +73,6 @@ const StadiumDetails = () => {
         <p><strong>{t("owner") || "مالك الملعب"}:</strong> {stadium.owner_number}</p>
         <p><strong>{t("created_at") || "تاريخ الإنشاء"}:</strong> {stadium.created_at}</p>
 
-        {/* زر الحذف (اختياري) */}
         <div style={{ marginTop: "30px", textAlign: "center" }}>
           <button className="delete" onClick={handleDelete}>
             {t("deleteStadium") || "حذف الملعب"}

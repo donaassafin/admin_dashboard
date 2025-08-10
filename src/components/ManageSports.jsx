@@ -1,4 +1,3 @@
-// src/pages/ManageSports.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
@@ -35,7 +34,7 @@ function ManageSports() {
     if (message.includes("photo must not be greater than 2048 kilobytes")) {
       return t("imageTooLarge");
     }
-    return "❌ " + message;
+    return message;
   };
 
   const handleSubmit = async (e) => {

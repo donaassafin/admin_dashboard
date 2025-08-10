@@ -74,8 +74,8 @@ const resources = {
       pricePerHour: "Price (per hour)",
       owner: "Owner",
     sports:"Sports",
-      nameTaken: "❌ The name has already been taken.",
-      imageTooLarge: "❌ The photo must not be larger than 2MB.",
+      nameTaken: " The name has already been taken.",
+      imageTooLarge: " The photo must not be larger than 2MB.",
       adminNotes: "Admin Notes",
       status: "Status",
       photos: "Photos",
@@ -188,19 +188,19 @@ const resources = {
       created_at: "تاريخ الإضافة",
 
       sports:"الرياضات",
-      nameTaken: "❌ الاسم مستخدم بالفعل.",
-      imageTooLarge: "❌ حجم الصورة يجب ألا يتجاوز 2MB.",
+      nameTaken: " الاسم مستخدم بالفعل.",
+      imageTooLarge: " حجم الصورة يجب ألا يتجاوز 2MB.",
       ManageSports: "إدارة الرياضات",
       sportName: "اسم الرياضة",
       playersCount: "عدد اللاعبين في الفريق",
       photo: "الصورة",
       add: "إضافة",
-      fillRequiredFields: "❌ الرجاء تعبئة كل الحقول المطلوبة",
-      editSuccess: "✅ تم التعديل بنجاح",
-      addSuccess: "✅ تم الإضافة بنجاح",
-      operationFailed: "❌ فشل العملية",
+      fillRequiredFields: " الرجاء تعبئة كل الحقول المطلوبة",
+      editSuccess: " تم التعديل بنجاح",
+      addSuccess: " تم الإضافة بنجاح",
+      operationFailed: " فشل العملية",
       confirmDelete: "هل أنت متأكد من حذف الرياضة؟",
-      deleteSuccess: "🗑️ تم الحذف بنجاح",
+      deleteSuccess: " تم الحذف بنجاح",
       noImage: "بدون صورة",
       fetchFailed: "فشل جلب البيانات",
       adminNotes: "ملاحظات المدير",

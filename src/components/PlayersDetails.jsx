@@ -19,7 +19,7 @@ const PlayerDetails = () => {
       setPlayer(res.data.data.profile);
     } catch (err) {
       console.error("Error fetching player details", err);
-      alert("❌ " + (err.response?.data?.message || "Failed to fetch player details"));
+      alert( (err.response?.data?.message || "Failed to fetch player details"));
     }
   };
 
@@ -37,13 +37,13 @@ const PlayerDetails = () => {
       });
       if (res.data.status) {
         alert(t("playerDeletedSuccessfully") || "تم حذف اللاعب بنجاح");
-        navigate(-1); // الرجوع للصفحة السابقة بعد الحذف
+        navigate(-1); 
       } else {
         alert(t("failedToDeletePlayer") || "فشل في حذف اللاعب");
       }
     } catch (err) {
       console.error("Error deleting player", err);
-      alert("❌ " + (err.response?.data?.message || "فشل في حذف اللاعب"));
+      alert( (err.response?.data?.message || "فشل في حذف اللاعب"));
     }
   };
 
@@ -81,7 +81,6 @@ const PlayerDetails = () => {
         <p><strong>{t("previousTeams")}:</strong> {player.previous_teams}</p>
         <p><strong>{t("notes")}:</strong> {player.extra_notes}</p>
 
-        {/* زر الحذف */}
         <div style={{ marginTop: "30px", textAlign: "center" }}>
           <button className="delete" onClick={handleDelete}>
             {t("deletePlayer") || "حذف اللاعب"}

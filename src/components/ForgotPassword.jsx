@@ -21,7 +21,7 @@ function ForgotPassword() {
         setErrorMsg("");
       }
     } catch (err) {
-      setErrorMsg("❌ حدث خطأ، تأكد من البريد الإلكتروني.");
+      setErrorMsg(" حدث خطأ، تأكد من البريد الإلكتروني.");
       setSuccessMsg("");
     }
   };
