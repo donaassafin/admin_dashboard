@@ -1,0 +1,111 @@
+/* PlayerDetails.css */
+
+.player-details-page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: #f9fdf9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2e2e2e;
+}
+
+.back-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 25px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.back-btn:hover {
+  background-color: #388e3c;
+}
+
+.page-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #388e3c;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.player-details-card {
+  background: white;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.15);
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e6f0e6;
+  padding-bottom: 8px;
+}
+
+.details-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #4caf50;
+  min-width: 150px;
+}
+
+.value {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #4caf50;
+  margin-top: 50px;
+  font-weight: 600;
+}
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #4caf50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  font-size: 18px;
+  color: #333;
+}

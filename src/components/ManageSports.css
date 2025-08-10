@@ -1,0 +1,135 @@
+.manage-sports-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+  direction: rtl; /* إذا لازم اتجاه RTL */
+}
+
+.manage-sports-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #4caf50; /* اللون الأخضر */
+  user-select: none;
+}
+
+.sport-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.sport-form input[type="text"],
+.sport-form input[type="number"],
+.sport-form input[type="file"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 220px;
+  background-color: #f9f9f9;
+}
+
+.sport-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sport-form button:hover {
+  background-color: #337835;
+}
+
+.sports-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.sport-card {
+  background: #f7f7f7;
+  border-radius: 14px;
+  padding: 18px;
+  width: 250px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.sport-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.sport-card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #333;
+  user-select: none;
+}
+
+.sport-card p {
+  margin: 6px 0;
+  color: #555;
+}
+
+.sport-image {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 150px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+button.edit {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+button.edit:hover {
+  background-color: #45a047;
+}
+
+button.delete {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+button.delete:hover {
+  background-color: #d32f2f;
+}
+
+/* رسالة */
+.message {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #e65100;
+  user-select: none;
+}

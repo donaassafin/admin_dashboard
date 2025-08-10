@@ -1,0 +1,50 @@
+.stadiums-page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+
+
+.styled-table th,
+.styled-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.styled-table th {
+  background-color: #f4f4f4;
+}
+
+.btn-view {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-view:hover {
+  background-color: #347836;
+}
+
+.stadium-details {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}

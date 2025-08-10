@@ -1,0 +1,117 @@
+/* PendingAsks.css */
+
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.clickable-row:hover {
+  background-color: #f5faff; /* لون أزرق فاتح عند المرور */
+  transform: scale(1.01); /* تكبير بسيط لإبراز التفاعل */
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.styled-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.status-badge.pending {
+  background-color: #d6b96e; 
+  color: #ffffff; 
+}
+
+.status-badge.approved {
+  background-color: #6bbf8a; 
+  color: #ffffff;
+}
+
+.status-badge.rejected {
+  background-color: #d97c7c; 
+  color: #ffffff;
+}
+
+
+.photo-preview {
+  display: flex;
+  gap: 5px;
+}
+
+.photo-preview img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.btn {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.btn-approve {
+  background-color: #28a745;
+}
+
+.btn-reject {
+  background-color: #dc3545;
+}
+
+.btn-delete {
+  background-color: #6c757d;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+.pending-asks-page {
+  padding: 20px; /* مسافة داخلية من جميع الجهات */
+  background-color: #f9f9f9; /* لون خلفية ناعم */
+  min-height: 100vh; /* يغطي كامل ارتفاع الشاشة */
+}
+
+.table-container {
+  margin: 20px auto; /* مسافة خارجية وتوسيط الجدول */
+  max-width: 95%; /* حتى ما يلتصق بالأطراف */
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
