@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Lottie from "lottie-react";
+import sportLoading from "../assets/SportLoading.json";
 import "./StadiumDetails.css";
 
 const StadiumDetails = () => {
@@ -43,15 +45,14 @@ const StadiumDetails = () => {
       }
     } catch (err) {
       console.error("Error deleting stadium", err);
-      alert( (err.response?.data?.message || "فشل في حذف الملعب"));
+      alert(err.response?.data?.message || "فشل في حذف الملعب");
     }
   };
 
   if (!stadium) {
     return (
       <div className="loading-container">
-        <div className="spinner"></div>
-        <p>{t("loading") || "جار التحميل..."}</p>
+        <Lottie animationData={sportLoading} loop={true} style={{ width: 220, height: 220 }} />
       </div>
     );
   }

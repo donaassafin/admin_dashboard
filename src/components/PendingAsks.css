@@ -25,10 +25,10 @@
   border-bottom: 1px solid #ddd;
 }
 
-.styled-table th {
+/* .styled-table th {
   background-color: #4caf50;
   color: #fff;
-}
+} */
 
 .styled-table tbody tr:last-child td {
   border-bottom: none;

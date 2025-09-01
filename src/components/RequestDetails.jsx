@@ -3,6 +3,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 import "./RequestDetails.css";
+import sportLoading from "../assets/SportLoading.json"; 
+import Lottie from "lottie-react";
+
 
 const RequestDetails = () => {
   const { id } = useParams();
@@ -32,9 +35,8 @@ const RequestDetails = () => {
 
   if (loading) {
     return (
-      <div className="details-loading">
-        <div className="spinner"></div>
-        <p>{t("loading")}</p>
+      <div className="loading-container">
+        <Lottie animationData={sportLoading} loop={true} style={{ width: 200, height: 200 }} />
       </div>
     );
   }

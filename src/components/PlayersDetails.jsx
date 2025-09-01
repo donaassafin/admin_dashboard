@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Lottie from "lottie-react";
+import sportLoading from "../assets/SportLoading.json"; 
 import "./PlayerDetails.css";
 
 const PlayerDetails = () => {
@@ -19,7 +21,7 @@ const PlayerDetails = () => {
       setPlayer(res.data.data.profile);
     } catch (err) {
       console.error("Error fetching player details", err);
-      alert( (err.response?.data?.message || "Failed to fetch player details"));
+      alert(err.response?.data?.message || "Failed to fetch player details");
     }
   };
 
@@ -43,15 +45,14 @@ const PlayerDetails = () => {
       }
     } catch (err) {
       console.error("Error deleting player", err);
-      alert( (err.response?.data?.message || "فشل في حذف اللاعب"));
+      alert(err.response?.data?.message || "فشل في حذف اللاعب");
     }
   };
 
   if (!player) {
     return (
       <div className="loading-container">
-        <div className="spinner"></div>
-        <p>{t("loading")}</p>
+        <Lottie animationData={sportLoading} loop={true} style={{ width: 200, height: 200 }} />
       </div>
     );
   }
@@ -65,7 +66,6 @@ const PlayerDetails = () => {
       <h1 className="page-title">{t("playerDetails")}</h1>
 
       <div className="player-details-card no-avatar">
-        {/* تفاصيل اللاعب */}
         <p><strong>{t("firstName")}:</strong> {player.first_name}</p>
         <p><strong>{t("lastName")}:</strong> {player.last_name}</p>
         <p><strong>{t("birthdate")}:</strong> {player.birthdate}</p>
@@ -75,10 +75,10 @@ const PlayerDetails = () => {
         <p><strong>{t("height")}:</strong> {player.height} cm</p>
         <p><strong>{t("weight")}:</strong> {player.weight} kg</p>
         <p><strong>{t("experience")}:</strong> {player.years_of_experience} {t("years")}</p>
-        <p><strong>{t("injuries")}:</strong> {player.injuries}</p>
         <p><strong>{t("positionsPlayed")}:</strong> {player.positions_played}</p>
         <p><strong>{t("achievements")}:</strong> {player.notable_achievements}</p>
         <p><strong>{t("previousTeams")}:</strong> {player.previous_teams}</p>
+        <p><strong>{t("injuries")}:</strong> {player.injuries}</p>
         <p><strong>{t("notes")}:</strong> {player.extra_notes}</p>
 
         <div style={{ marginTop: "30px", textAlign: "center" }}>

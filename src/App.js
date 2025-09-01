@@ -12,6 +12,9 @@ import ManageSports from "./components/ManageSports";
 import PlayersDetails from "./components/PlayersDetails";
 import StadiumDetails from "./components/StadiumDetails";
 import RequestDetails from "./components/RequestDetails";
+import LeaguesTable from "./components/LeagueTable";
+
+
 function App() {
   return (
 <Router>
@@ -29,6 +32,7 @@ function App() {
   <Route path="/pending-asks" element={<PendingAsks />} />
   <Route path="/request-details/:id" element={<RequestDetails />} />     
   <Route path="/manage-sports" element={<ManageSports/>}/>
+  <Route path="/leagues" element={<LeaguesTable />} />
 
 </Routes>
 </Router>

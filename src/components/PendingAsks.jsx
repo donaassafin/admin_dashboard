@@ -4,14 +4,19 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import "./PendingAsks.css";
+import sportLoading from "../assets/SportLoading.json";
+import Lottie from "lottie-react";
 
 const PendingAsks = () => {
   const [asks, setAsks] = useState([]);
   const { t } = useTranslation();
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
+  const [loading, setLoading] = useState(true);  
 
   const fetchAsks = async () => {
+        setLoading(true); 
+
     try {
       const res = await axios.get("http://localhost:8000/api/stadium/viewAllRequest", {
         headers: { Authorization: `Bearer ${token}` },
@@ -19,6 +24,8 @@ const PendingAsks = () => {
       setAsks(res.data.data.Asks || []);
     } catch (err) {
       console.error(t("fetchFailed"), err);
+    }finally {
+      setLoading(false); 
     }
   };
 
@@ -70,6 +77,13 @@ const PendingAsks = () => {
     navigate(`/request-details/${id}`);
   };
 
+if (loading) {
+    return (
+      <div className="loading-container">
+        <Lottie animationData={sportLoading} loop={true} style={{ width: 220, height: 220 }} />
+      </div>
+    );
+  }
   return (
     <div className="pending-asks-page">
       <h1 className="page-title">{t("pendingRequests")}</h1>

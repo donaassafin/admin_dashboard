@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import Lottie from "lottie-react";
+import sportLoading from "../assets/SportLoading.json";
 import "./ManageSports.css";
 
 function ManageSports() {
@@ -9,10 +11,12 @@ function ManageSports() {
   const [form, setForm] = useState({ name: "", max_players: "", photo: null });
   const [editingId, setEditingId] = useState(null);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const token = localStorage.getItem("token");
 
   const fetchSports = async () => {
+    setLoading(true);
     try {
       const res = await axios.get("http://localhost:8000/api/sport/viewall", {
         headers: { Authorization: `Bearer ${token}` },
@@ -20,6 +24,8 @@ function ManageSports() {
       setSports(res.data.data["Sports:"] || []);
     } catch (err) {
       console.error(t("fetchFailed"), err);
+    } finally {
+      setLoading(false); // يوقف اللودينغ دائماً
     }
   };
 
@@ -40,7 +46,7 @@ function ManageSports() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!form.name || !form.max_players || (!form.photo && !editingId)) {
+    if (!form.name || !form.max_players) {
       setMessage(t("fillRequiredFields"));
       return;
     }
@@ -105,6 +111,18 @@ function ManageSports() {
     setEditingId(sport.id);
   };
 
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <Lottie
+          animationData={sportLoading}
+          loop={true}
+          style={{ width: 220, height: 220 }}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="manage-sports-container">
       <h1 className="manage-sports-title">{t("ManageSports")}</h1>
@@ -147,18 +165,6 @@ function ManageSports() {
             <p>
               {t("playersCount")}: {sport.max_players_per_team || "?"}
             </p>
-            {sport.photo ? (
-              <img
-                src={`http://localhost:8000/storage/${sport.photo.replace(
-                  /^\/?storage\//,
-                  ""
-                )}`}
-                alt={sport.name}
-                className="sport-image"
-              />
-            ) : (
-              <p>{t("noImage")}</p>
-            )}
             <div className="btn-group" style={{ justifyContent: "center" }}>
               <button className="edit" onClick={() => handleEdit(sport)}>
                 {t("edit")}

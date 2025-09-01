@@ -95,6 +95,15 @@ const resources = {
     hours: "hours",
     coordinates: "Coordinates",
     updated_at: "Last Updated",
+    leagues: "Leagues",
+    leaguesList: "Leagues List",
+    leagueName: "League Name",
+    startDate: "Start Date",
+    endDate: "End Date",
+    prize: "Prize",
+    active: "Active",
+    finished: "Finished",
+
     },
   },
   ar: {
@@ -117,6 +126,18 @@ const resources = {
       pendingRequests: "الطلبات المعلقة",
       logout: "تسجيل الخروج",
       logoutFailed: "فشل تسجيل الخروج!",
+
+
+      leagues: "الدوريات",
+      leaguesList: "قائمة الدوريات",
+      leagueName: "اسم الدوري",
+      startDate: "تاريخ البدء",
+      endDate: "تاريخ الانتهاء",
+      prize: "الجائزة",
+      active: "نشط",
+      finished: "منتهي",
+
+
 
       confirmDeletePlayer: "هل أنت متأكد من حذف اللاعب؟",
       playerDeletedSuccessfully: "تم حذف اللاعب بنجاح",

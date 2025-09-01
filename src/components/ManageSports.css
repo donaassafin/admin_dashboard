@@ -3,7 +3,7 @@
   max-width: 1200px;
   margin: auto;
   font-family: "Segoe UI", sans-serif;
-  direction: rtl; /* إذا لازم اتجاه RTL */
+  direction: rtl;
 }
 
 .manage-sports-title {
@@ -17,34 +17,37 @@
 
 .sport-form {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column; /* يخلي العناصر فوق بعض */
+  gap: 15px;
+  align-items: center;
   margin-bottom: 25px;
 }
 
 .sport-form input[type="text"],
-.sport-form input[type="number"],
-.sport-form input[type="file"] {
+.sport-form input[type="number"] {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  width: 220px;
+  width: 280px;
   background-color: #f9f9f9;
 }
 
 .sport-form button {
-  padding: 10px 20px;
+  width: 200px; /* يخلي الزر واضح */
+  padding: 12px 20px;
   background-color: #4caf50;
   color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .sport-form button:hover {
   background-color: #337835;
+  transform: translateY(-2px);
 }
 
 .sports-list {

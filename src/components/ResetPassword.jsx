@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
+import Lottie from "lottie-react";
+import sportLoading from "../assets/SportLoading.json";
 
 function ResetPassword() {
   const { t } = useTranslation();
@@ -14,6 +16,7 @@ function ResetPassword() {
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -28,9 +31,10 @@ function ResetPassword() {
     e.preventDefault();
     setMessage("");
     setError("");
+    setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:8000/api/password/reset", {
+        await axios.post("http://localhost:8000/api/password/reset", {
         email,
         token,
         password,
@@ -40,15 +44,23 @@ function ResetPassword() {
       setMessage("✔ تمت إعادة تعيين كلمة المرور بنجاح.");
 
       setTimeout(() => {
-       navigate("/", { replace: true });
-
-      }, 1500); 
-
+        navigate("/", { replace: true });
+      }, 1500);
     } catch (err) {
       console.error(err);
       setError(" فشل إعادة التعيين. تحقق من الرمز أو البيانات.");
+    } finally {
+      setLoading(false);
     }
   };
+
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <Lottie animationData={sportLoading} loop={true} style={{ width: 220, height: 220 }} />
+      </div>
+    );
+  }
 
   return (
     <div className="login-container">
