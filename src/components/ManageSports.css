@@ -17,7 +17,7 @@
 
 .sport-form {
   display: flex;
-  flex-direction: column; /* يخلي العناصر فوق بعض */
+  flex-direction: column; 
   gap: 15px;
   align-items: center;
   margin-bottom: 25px;
@@ -33,7 +33,7 @@
 }
 
 .sport-form button {
-  width: 200px; /* يخلي الزر واضح */
+  width: 200px; 
   padding: 12px 20px;
   background-color: #4caf50;
   color: white;
